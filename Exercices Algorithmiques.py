@@ -109,7 +109,62 @@ def additivte(n):
 additivte(10)
 
 
-# In[ ]:
+
+
+## 29/03/2021 ##
+## Target Somme ##
+
+def getkeyNumbers(array, tatgetSum){
+// on parcours le tableau via une boucle for
+for(i=0; i<=array.length; i++){
+    
+  for(y=i+1; i<= array.length; y++){
+      if
+      
+  }
+    
+  ## we test each conbinaison
+  var a = array[i];
+  var b = array[i-1];
+  var c = array[i+1];
+    
+  # we get sum of combinaison   
+  var sumAB = a + b;
+  var somAC = a + c;
+  var somCB = c +b
+    
+  # we test the equation
+  if(sumAB == tatgetSum ):
+    # we return the result
+    return [a, b];
+ endif
+
+  elif(sumAC == TargetSum) :
+
+  return [a, c];
+
+ endif;
+
+elif(sumBC == TargetSum) :
+
+ return [b, c];
+
+endif;
+
+else:
+    return "0 number has been found";
+}
+
+
+}
+
+
+
+
+
+
+
+
 
 
 
