@@ -1,37 +1,19 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# ## 1.1 Simple echange ##
-
-# In[4]:
-
+## 1.1 Simple echange ##
 
 a = 5
 b = 8
 a = 8
 
-
-# In[5]:
-
-
 a
 
-
-# ## 1.2 Le carré ##
-
-# In[8]:
-
+## 1.2 Le carré ##
 
 def Carre(n:int):
     return n * n
 
 Carre(10)
 
-
-# ## 1.3 la condition ##
-
-# In[15]:
-
+## 1.3 la condition ##
 
 def checkNumber(n:int):
     v = ""
@@ -45,11 +27,7 @@ def checkNumber(n:int):
 
 checkNumber(str(n))
 
-
-# ## 1.4 Le produit ##
-
-# In[26]:
-
+## 1.4 Le produit ##
 
 def calcProduct(n1: int, n2 :int) : 
     i = ""
@@ -59,17 +37,9 @@ def calcProduct(n1: int, n2 :int) :
         i = "negatif"
     print(i)
 
-
-# In[27]:
-
-
 calcProduct(2, 5)
 
-
-# ## 1.5 Calcul ##
-
-# In[54]:
-
+## 1.5 Calcul ##
 
 def calcul(n:int):
     i = 0
@@ -80,17 +50,9 @@ def calcul(n:int):
         else:
             break;
 
-
-# In[55]:
-
-
 calcul(17)
 
-
-# ## 1.6 La somme ##
-
-# In[75]:
-
+## 1.6 La somme ##
 
 def additivte(n):
     i = 0
@@ -102,70 +64,34 @@ def additivte(n):
         else:
              i+= 1
 
+ additivte(10)
 
-# In[76]:
+# Target Somme 
 
+# Distance of Levenshtein
 
-additivte(10)
-
-
-
-
-## 29/03/2021 ##
-## Target Somme ##
-
-def getkeyNumbers(array, tatgetSum){
-// on parcours le tableau via une boucle for
-for(i=0; i<=array.length; i++){
-    
-  for(y=i+1; i<= array.length; y++){
-      if
-      
-  }
-    
-  ## we test each conbinaison
-  var a = array[i];
-  var b = array[i-1];
-  var c = array[i+1];
-    
-  # we get sum of combinaison   
-  var sumAB = a + b;
-  var somAC = a + c;
-  var somCB = c +b
-    
-  # we test the equation
-  if(sumAB == tatgetSum ):
-    # we return the result
-    return [a, b];
- endif
-
-  elif(sumAC == TargetSum) :
-
-  return [a, c];
-
- endif;
-
-elif(sumBC == TargetSum) :
-
- return [b, c];
-
-endif;
-
-else:
-    return "0 number has been found";
+def getDistance(a, b) {
+        var n = a.length, m = b.length, matrice = [];
+        for(var i=-1; i < n; i++) {
+                matrice[i]=[];
+                matrice[i][-1]=i+1;
+        }
+        for(var j=-1; j < m; j++) {
+                matrice[-1][j]=j+1;
+        }
+        for(var i=0; i < n; i++) {
+                for(var j=0; j < m; j++) {
+                        var cout = (a.charAt(i) == b.charAt(j))? 0 : 1;
+                        matrice[i][j] = minimum(1+matrice[i][j-1], 1+matrice[i-1][j], cout+matrice[i-1][j-1]);
+                }
+        }
+        return matrice[n-1][m-1];
 }
+// la fonction minimum() est à définir !
 
-
-}
-
-
-
+   
 
 
 
-
-
-
-
-
+    
 
